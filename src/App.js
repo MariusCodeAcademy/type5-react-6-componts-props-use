@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import BtnList from './components/BtnList';
 import MyButton from './components/MyButton';
@@ -22,15 +23,24 @@ const btnData = [
 ];
 
 function App() {
+  // sukurti totalClickCount state (pradine reiksme 0)
+  const [totalClickCount, setTotalClickCount] = useState(0);
+
+  // sukurti totalClickHandler() {} kuri padidina reiksme vienetu
+  function totalClickHandler() {
+    setTotalClickCount((prevState) => prevState + 1);
+  }
   return (
     <div className='App'>
       <h1>App</h1>
-      <MyButton name='btn1' color='red' />
-      <MyButton name='btn2' color='blue' />
-      <MyButton name='btn3' color='green' />
+      <h2>Total click count: {totalClickCount}</h2>
+      <MyButton name='btn1' color='red' onBtnClick={totalClickHandler} />
+      <MyButton name='btn2' color='blue' onBtnClick={totalClickHandler} />
+      <MyButton name='btn3' color='green' onBtnClick={totalClickHandler} />
       <BtnList items={btnData} />
       <Box title='Small box' size='sm' />
       <Box title='Large box' size='lg' />
+      <Box title='Medium box' size='md' />
     </div>
   );
 }

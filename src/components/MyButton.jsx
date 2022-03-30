@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function MyButton(props) {
   const [count, setCount] = useState(0);
-  console.log('MyButton props ===', props);
+  // console.log('MyButton props ===', props);
   const nameFromProps = props.name;
   const styleObj = {
     backgroundColor: props.color,
@@ -12,7 +12,7 @@ function MyButton(props) {
     console.log('button clicked');
     setCount((prevState) => prevState + 1);
     // vygdom App.js aprasyta funkcija ir padidnam skaitliuka
-    props.onBtnClick();
+    props.onBtnClick(nameFromProps);
   }
 
   return (

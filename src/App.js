@@ -27,8 +27,9 @@ function App() {
   const [totalClickCount, setTotalClickCount] = useState(0);
 
   // sukurti totalClickHandler() {} kuri padidina reiksme vienetu
-  function totalClickHandler() {
+  function totalClickHandler(btnTitle) {
     setTotalClickCount((prevState) => prevState + 1);
+    console.log('btnTitle', btnTitle);
   }
   return (
     <div className='App'>
@@ -37,7 +38,7 @@ function App() {
       <MyButton name='btn1' color='red' onBtnClick={totalClickHandler} />
       <MyButton name='btn2' color='blue' onBtnClick={totalClickHandler} />
       <MyButton name='btn3' color='green' onBtnClick={totalClickHandler} />
-      <BtnList items={btnData} />
+      <BtnList items={btnData} onBtnClick={totalClickHandler} />
       <Box title='Small box' size='sm' />
       <Box title='Large box' size='lg' />
       <Box title='Medium box' size='md' />

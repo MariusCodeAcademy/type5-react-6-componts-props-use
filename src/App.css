@@ -1,1 +1,17 @@
 @import url('https://cdn.jsdelivr.net/npm/water.css@2/out/water.css');
+
+.smallBox {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #000;
+}
+.largeBox {
+  width: 300px;
+  height: 150px;
+  font-size: 2rem;
+  line-height: 150px;
+  text-align: center;
+  border: 1px solid #000;
+}

@@ -26,3 +26,10 @@ export default SendFetch;
 // sukurti tuscia komponenta SendFetch, isitraukti ji i App.js
 
 // prideti mygtuka SendFetch ir iskviesti aprasyta sendPostFetch() {}
+
+const dateSample = {
+  year: 2022,
+  month: 12,
+  week: 45,
+  day: 7,
+};

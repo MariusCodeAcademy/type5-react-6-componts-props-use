@@ -4,6 +4,7 @@ import BtnList from './components/BtnList';
 import MyButton from './components/MyButton';
 import Box from './components/Box';
 import SendFetch from './components/SendFetch';
+import TotalClickCount from './components/TotalClickCount';
 
 const btnData = [
   {
@@ -36,7 +37,7 @@ function App() {
     <div className='App'>
       <SendFetch />
       <h1>App</h1>
-      <h2>Total click count: {totalClickCount}</h2>
+      <TotalClickCount clickCount={totalClickCount} />
       <MyButton name='btn1' color='red' onBtnClick={totalClickHandler} />
       <MyButton name='btn2' color='blue' onBtnClick={totalClickHandler} />
       <MyButton name='btn3' color='green' onBtnClick={totalClickHandler} />

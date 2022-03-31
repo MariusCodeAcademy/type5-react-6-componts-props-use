@@ -27,9 +27,9 @@ export default SendFetch;
 
 // prideti mygtuka SendFetch ir iskviesti aprasyta sendPostFetch() {}
 
-const dateSample = {
-  year: 2022,
-  month: 12,
-  week: 45,
-  day: 7,
-};
+// const dateSample = {
+//   year: 2022,
+//   month: 12,
+//   week: 45,
+//   day: 7,
+// };
